@@ -1,0 +1,134 @@
+:root {
+  color: #2f3342;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f8f9ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+button {
+  font: inherit;
+}
+
+.landing-shell {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 32px 38px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(201, 255, 242, 0.5) 0, rgba(201, 255, 242, 0.2) 21%, transparent 46%),
+    linear-gradient(180deg, #f8fbff 0%, #eaf8fb 36%, #f2edf9 68%, #fff5fa 100%);
+}
+
+.landing-card {
+  width: min(100%, 314px);
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-10px);
+}
+
+.app-logo {
+  width: 140px;
+  height: 140px;
+  display: block;
+  object-fit: contain;
+  border-radius: 20px;
+  filter: drop-shadow(0 18px 34px rgba(116, 73, 180, 0.16));
+}
+
+.description {
+  width: 100%;
+  margin: 14px 0 40px;
+  color: rgba(47, 51, 66, 0.78);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 400;
+  text-align: center;
+}
+
+.play-button {
+  position: relative;
+  width: 100%;
+  min-height: 40px;
+  display: grid;
+  grid-template-columns: 42px 1fr 42px;
+  align-items: center;
+  gap: 0;
+  padding: 0 16px;
+  color: #1f2330;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow:
+    0 14px 38px rgba(139, 114, 172, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.56);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.play-button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.58);
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow:
+    0 18px 44px rgba(139, 114, 172, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.play-button:active {
+  transform: translateY(0);
+}
+
+.play-button:focus-visible {
+  outline: 3px solid rgba(109, 99, 244, 0.24);
+  outline-offset: 4px;
+}
+
+.play-icon {
+  width: 22px;
+  height: 22px;
+  justify-self: center;
+}
+
+.play-button span {
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: normal;
+}
+
+@media (min-width: 720px) {
+  .landing-shell {
+    padding: 48px;
+  }
+
+  .landing-card {
+    width: 314px;
+  }
+}
