@@ -67,6 +67,12 @@ button {
   text-align: center;
 }
 
+.store-buttons {
+  width: 100%;
+  display: grid;
+  gap: 12px;
+}
+
 .play-button {
   position: relative;
   width: 100%;
